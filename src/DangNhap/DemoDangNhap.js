@@ -61,7 +61,6 @@ export default function DemoDangNhap() {
         console.log(user);
 
         if (user) {
-            
             console.log('Đăng nhập thành công');
             navigate('/trangchu');
             alert('1');

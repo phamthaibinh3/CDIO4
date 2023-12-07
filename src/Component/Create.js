@@ -123,6 +123,14 @@ export default function Create() {
         setTimeout(() => {
           setFields(false);
           setIsLoading(false);
+          setGia('');
+          setImageAsset(null);
+          setLoaiSach(null);
+          setMoTa('');
+          setNgonNgu(null);
+          setSoLuong('');
+          setTacGia('');
+          setTenSach('');
         }, 3000);
       }
     } catch {

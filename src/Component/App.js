@@ -11,6 +11,9 @@ import { Route, Routes } from "react-router-dom";
 import Create from "./Create";
 import Demo from './Demo'
 import DemoDangNhap from "../DangNhap/DemoDangNhap";
+import DocGia from '../DocGia/DocGia'
+import SuaDocGia from "../DocGia/SuaDocGia";
+import SuaSach from "./SuaSach";
 
 function App() {
   const [taiLieu, setTaiLieu] = useState(tailieu[0]);
@@ -23,12 +26,15 @@ function App() {
         value={{ xemnhieu, xemNhieu, tailieu, taiLieu, setTaiLieu }}
       >
         <Header />
-        <main className="mt-16 md:mt-24 p-8 w-full">
+        <main className="mt-16 md:mt-24  w-full">
           <Routes>
             <Route path="/trangchu" element={<Header2 />} />
             <Route path="/createItem" element={<Create />} />
             <Route path="/kho" element={<Demo />} />
             <Route path="/" element={<DemoDangNhap />} />
+            <Route path="/docgia" element={<DocGia />} />
+            <Route path="/suadocgia/:id" element={<SuaDocGia />} />
+            <Route path="/suasach/:id" element={<SuaSach />} />
           </Routes>
         </main>
       </Data.Provider>

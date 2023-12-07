@@ -14,6 +14,7 @@ import DemoDangNhap from "../DangNhap/DemoDangNhap";
 import DocGia from '../DocGia/DocGia'
 import SuaDocGia from "../DocGia/SuaDocGia";
 import SuaSach from "./SuaSach";
+import ThueSach from '../ThueSach/ThueSach'
 
 function App() {
   const [taiLieu, setTaiLieu] = useState(tailieu[0]);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/docgia" element={<DocGia />} />
             <Route path="/suadocgia/:id" element={<SuaDocGia />} />
             <Route path="/suasach/:id" element={<SuaSach />} />
+            <Route path="/thueSach" element={<ThueSach />} />
           </Routes>
         </main>
       </Data.Provider>

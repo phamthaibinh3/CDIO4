@@ -40,17 +40,21 @@ const BookManagement = () => {
     return (
         <div className="min-h-screen mt-24 bg-primary flex items-center justify-center">
             <div className="w-full">
-                <h1 className=" m-auto mt-[-150px] text-3xl font-bold mb-8 text-center">Book Management</h1>
+                <h1 className=" m-auto mt-[-100px] text-3xl font-bold mb-8 text-center">Book Management</h1>
                 <div className="mb-8 bg-blue-500 text-white py-2 px-4 rounded-full float-right">
                     {/* Thêm nút "Thêm Sách" với Link ở đầu bảng */}
                     <Link to="/createItem" className="text-white bg-blue-500 px-4 py-2 rounded mb-4">
                         Thêm Sách
                     </Link>
-
-
-
-                    {/* ... (code table giữ nguyên) */}
                 </div>
+                <div className="mb-8 bg-green-500 text-white py-2 px-4 rounded-full float-right">
+                    {/* Thêm nút "Thêm Sách" với Link ở đầu bảng */}
+                    <Link to="/thueSach" className="text-white bg-green-500 px-4 py-2 rounded mb-4">
+                        Thuê sách
+                    </Link>
+                </div>
+
+
 
                 <table className="w-full border-collapse border border-gray-300">
                     <thead>
@@ -85,7 +89,6 @@ const BookManagement = () => {
                                     </button>
                                     <Link to={`/suasach/${book.id}`}
                                         className="bg-green-500 text-white px-3 py-1 rounded transition duration-300 hover:bg-red-600 focus:outline-none"
-                                        onClick={() => deleteBook(book.id)}
                                     >
                                         Sửa
                                     </Link>

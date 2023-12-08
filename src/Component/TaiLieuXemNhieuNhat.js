@@ -13,8 +13,6 @@ export default function TaiLieuMoiNhat() {
           <span className="font-bold text-center">{data.name}</span>
         </div>
       ))}
-
-      
     </div>
   );
 }

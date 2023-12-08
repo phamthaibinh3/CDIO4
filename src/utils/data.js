@@ -1,6 +1,6 @@
-
+import test from '../img/dacnhantam.jpg'
 export const categories = [
-  {
+  { 
     id: 1,
     name: 'Chicken',
     urlParamName: 'chicken',
@@ -42,16 +42,19 @@ export const LoaiSach = [
     id: 1,
     name: 'Văn học',
     urlParamName: 'Văn học',
+    icon : test
   },
   {
     id: 2,
     name: 'Kinh doanh và phát triển bản thân',
     urlParamName: 'Kinh doanh và phát triển bản thân',
+    icon: test
   },
   {
     id: 3,
     name: 'Khoa học và giáo dục',
     urlParamName: 'Khoa học và giáo dục',
+    icon: test
   },
   {
     id: 4,
@@ -91,4 +94,10 @@ export const NgonNgu = [
     ngongu: "Brasil",
     url: "Brasil",
   },
+]
+export const hinhloaisach = [
+  { 
+    hinh: test,
+  
+  }
 ]

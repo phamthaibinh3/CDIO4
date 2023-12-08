@@ -56,28 +56,21 @@ const Menu = () => {
                                         : 'bg-card'
                                         } w-24 min-w-[94px] h-28 cursor-pointer rounded-lg drop-shadow-xl flex flex-col gap-3 items-center justify-center duration-150 transition-all ease-in-out hover:bg-red-500`}
                                 >
-                                    <div
-                                        className={`w-10 h-10 rounded-full ${selectedCategory === category.urlParamName
-                                            ? 'bg-card-500'
-                                            : 'bg-red'
-                                            }  group-hover:bg-card flex items-center justify-center`}
-                                    >
-                                        <IoFastFood
-                                            className={`text-card ${selectedCategory === category.urlParamName
-                                                ? 'bg-card-500'
-                                                : 'bg-red'
-                                                } text-textColor`}
-                                        ></IoFastFood>
-                                    </div>
-                                    <p
-                                        className={`text-sm ${selectedCategory === category.urlParamName
-                                            ? 'bg-card-500'
-                                            : 'bg-red'
-                                            } text-textColor group-hover:text-card`}
-                                    >
-                                        {' '}
-                                        {category.name}
-                                    </p>
+                                  
+                                       
+                                        <div className='text-center'>
+                                            <p
+                                                className={`text-sm ${selectedCategory === category.urlParamName
+                                                    ? 'bg-card-500'
+                                                    : 'bg-red'
+                                                    } text-textColor group-hover:text-card`}
+                                            >
+                                                {category.name}
+                                            </p>
+                                        </div>
+                                  
+
+
                                 </motion.div>
                             ))}
                     </div>

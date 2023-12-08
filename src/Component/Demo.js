@@ -59,27 +59,27 @@ const BookManagement = () => {
                 <table className="w-full border-collapse border border-gray-300">
                     <thead>
                         <tr className="bg-gray-200">
+                            <th className="py-2 px-4 border-b">Hình</th>
                             <th className="py-2 px-4 border-b">Tên</th>
                             <th className="py-2 px-4 border-b">Tác giả</th>
                             <th className="py-2 px-4 border-b">Ngôn Ngữ</th>
                             <th className="py-2 px-4 border-b">Giá</th>
-                            <th className="py-2 px-4 border-b">Hình</th>
                             <th className="py-2 px-4 border-b">Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
                         {books.map((book) => (
                             <tr key={book.id} className="text-center">
-                                <td className="py-2 px-4 border-b">{book.tenSach}</td>
-                                <td className="py-2 px-4 border-b">{book.tacGia}</td>
-                                <td className="py-2 px-4 border-b">{book.ngonNgu}</td>
-                                <td className="py-2 px-4 border-b">{book.gia}</td>
                                 <td className="py-2 px-4 border-b">
                                     <img
                                         src={book.imageURL}
                                         className='w-20 h-120 m-auto'>
                                     </img>
                                 </td>
+                                <td className="py-2 px-4 border-b">{book.tenSach}</td>
+                                <td className="py-2 px-4 border-b">{book.tacGia}</td>
+                                <td className="py-2 px-4 border-b">{book.ngonNgu}</td>
+                                <td className="py-2 px-4 border-b">{book.gia}</td>
                                 <td className="py-2 px-4 border-b">
                                     <button
                                         className="bg-red-500 text-white px-3 py-1 rounded transition duration-300 hover:bg-red-600 focus:outline-none"

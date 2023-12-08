@@ -11,10 +11,13 @@ import { Route, Routes } from "react-router-dom";
 import Create from "./Create";
 import Demo from './Demo'
 import DemoDangNhap from "../DangNhap/DemoDangNhap";
+import TrangChuNV from "../NhanVien/TrangChuNV";
 import DocGia from '../DocGia/DocGia'
 import SuaDocGia from "../DocGia/SuaDocGia";
 import SuaSach from "./SuaSach";
 import ThueSach from '../ThueSach/ThueSach'
+import Nav from "../Admin/Nav";
+import KhoSach from "../Admin/KhoSach";
 
 function App() {
   const [taiLieu, setTaiLieu] = useState(tailieu[0]);
@@ -26,7 +29,8 @@ function App() {
         reducer={reducer}
         value={{ xemnhieu, xemNhieu, tailieu, taiLieu, setTaiLieu }}
       >
-        <Header />
+        {/* <Header /> */}
+        
         <main className="mt-16 md:mt-24  w-full">
           <Routes>
             <Route path="/trangchu" element={<Header2 />} />
@@ -37,8 +41,11 @@ function App() {
             <Route path="/suadocgia/:id" element={<SuaDocGia />} />
             <Route path="/suasach/:id" element={<SuaSach />} />
             <Route path="/thueSach" element={<ThueSach />} />
+            <Route path="/admin/khosach" element={<KhoSach />} />
           </Routes>
         </main>
+        {/* <Nav/>   */}
+        {/* <KhoSach/> */}
       </Data.Provider>
     </div>
   );

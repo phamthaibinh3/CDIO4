@@ -4,10 +4,11 @@ import { CiSearch } from "react-icons/ci";
 import Menu from "./Menu";
 import TaiLieuMoiNhat from "./TaiLieuMoiNhat";
 import TaiLieuXemNhieuNhat from "./TaiLieuXemNhieuNhat";
-
+import Header from './Header'
 export default function Header2() {
   return (
     <div>
+      {/* <Header/> */}
       <div className="w-full h-[320px]">
         <img src={banner} alt="" className="w-full h-full" />
         <h1 className="relative top-[-150px] text-center text-3xl text-blue-700 font-bold font-serif ">

@@ -62,9 +62,9 @@ const BookManagement = () => {
                             <th className="py-2 px-4 border-b">Hình</th>
                             <th className="py-2 px-4 border-b">Tên</th>
                             <th className="py-2 px-4 border-b">Tác giả</th>
-                            <th className="py-2 px-4 border-b">Ngôn Ngữ</th>
+                            <th className="py-2 px-4 border-b">Ngôn ngữ</th>
                             <th className="py-2 px-4 border-b">Giá</th>
-                            <th className="py-2 px-4 border-b">Hành động</th>
+                            <th className="py-2 px-4 border-b">Số lượng</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -81,7 +81,7 @@ const BookManagement = () => {
                                 <td className="py-2 px-4 border-b">{book.ngonNgu}</td>
                                 <td className="py-2 px-4 border-b">{book.gia}</td>
                                 <td className="py-2 px-4 border-b">
-                                    <button
+                                    {/* <button
                                         className="bg-red-500 text-white px-3 py-1 rounded transition duration-300 hover:bg-red-600 focus:outline-none"
                                         onClick={() => deleteBook(book.id)}
                                     >
@@ -91,7 +91,8 @@ const BookManagement = () => {
                                         className="bg-green-500 text-white px-3 py-1 rounded transition duration-300 hover:bg-red-600 focus:outline-none"
                                     >
                                         Sửa
-                                    </Link>
+                                    </Link> */}
+                                    {book.soLuong}
                                 </td>
                             </tr>
                         ))}

@@ -62,7 +62,11 @@ export default function DemoDangNhap() {
 
         if (user) {
             console.log('Đăng nhập thành công');
-            navigate('/trangchu');
+            if(nguoiDung === "NhanVien"){
+                navigate('/trangchu');
+            }else{
+                navigate('/admin/khosach');
+            }
             alert('1');
         } else {
             // Đăng nhập thất bại

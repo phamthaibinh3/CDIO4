@@ -55,15 +55,15 @@ const Header = () => {
             <Link to='/kho' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Kho
             </Link>
-            <Link to = '/createItem' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            {/* <Link to = '/createItem' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Thêm Sách
-            </Link>
+            </Link> */}
             <Link to='/docgia' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Độc giả
             </Link>
-            <li className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Hướng dẫn
-            </li>
+            <Link to ='/trasach' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+              Trả sách
+            </Link>
             <Link to = '/' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Đăng Nhập
             </Link>

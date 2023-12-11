@@ -64,6 +64,9 @@ const Nav = () => {
                         <li className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Nhân viên
                         </li>
+                        <li className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                            Phiếu thuê
+                        </li>
                         <Link to='/' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Đăng Nhập
                         </Link>

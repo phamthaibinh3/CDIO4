@@ -40,7 +40,7 @@ const BookManagement = () => {
     };
     return (
         <div>
-            <Nav className=''/>
+            {/* <Nav className=''/> */}
             <div className="min-h-screen mt-24 bg-primary flex items-center justify-center">
                 <div className="w-full">
                     <h1 className=" m-auto mt-[-100px] text-3xl font-bold mb-8 text-center">Book Management</h1>

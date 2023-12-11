@@ -67,6 +67,7 @@ const LapPhieuThueSach = () => {
                 });
 
                 console.log('Đã lập phiếu thuê sách với ID:', thueSachRef.id);
+                alert('thuê thành công');
                 setError('');
             } else {
                 setError('Số lượng sách không hợp lệ.');

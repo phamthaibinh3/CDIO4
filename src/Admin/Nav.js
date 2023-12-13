@@ -61,9 +61,9 @@ const Nav = () => {
                         <Link to='/docgia' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Độc giả
                         </Link>
-                        <li className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                        <Link to ='/themnhanvien' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Nhân viên
-                        </li>
+                        </Link>
                         <li className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Phiếu thuê
                         </li>

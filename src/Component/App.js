@@ -19,6 +19,9 @@ import ThueSach from '../ThueSach/ThueSach'
 import Nav from "../Admin/Nav";
 import KhoSach from "../Admin/KhoSach";
 import TraSach from '../TraSach/TraSach'
+import ThemNhanVien from "../Admin/ThemNhanVien";
+import NguoiDung from "../Admin/NguoiDung";
+import SuaNhanVien from "../Admin/SuaNhanVien";
 
 function App() {
   const [taiLieu, setTaiLieu] = useState(tailieu[0]);
@@ -44,6 +47,9 @@ function App() {
             <Route path="/thueSach" element={<ThueSach />} />
             <Route path="/trasach" element={<TraSach />} />
             <Route path="/admin/khosach" element={<KhoSach />} />
+            <Route path="/admin/nguoidung" element={<NguoiDung />} />
+            <Route path="/admin/themnguoidung" element={<ThemNhanVien />} />
+            <Route path="/admin/suanguoidung/:id" element={<SuaNhanVien />} />
           </Routes>
         </main>
         {/* <Nav/>   */}

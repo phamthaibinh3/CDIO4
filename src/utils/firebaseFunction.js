@@ -6,6 +6,12 @@ export const saveItem = async data => {
         doc(firestore, 'books', `${Date.now()}`), data, { merge: true, }
     );
 };
+//xử lui dong bo / sử dụng forebtore xử lý đưa hình ảnh vô
+export const nguoiDung = async data => {
+    await setDoc(
+        doc(firestore, 'NguoiDung', `${Date.now()}`), data, { merge: true, }
+    );
+};
 //độc giả
 export const docgia = async data => {
     await setDoc(

@@ -61,12 +61,12 @@ const Nav = () => {
                         <Link to='/docgia' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Độc giả
                         </Link>
-                        <Link to ='/themnhanvien' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                            Nhân viên
+                        <Link to='/admin/nguoidung' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                            Người dùng
                         </Link>
-                        <li className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-                            Phiếu thuê
-                        </li>
+                        <Link to='/admin/taotaikhoan' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+                            Tạo tài khoản
+                        </Link>
                         <Link to='/' className=" text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
                             Đăng Nhập
                         </Link>

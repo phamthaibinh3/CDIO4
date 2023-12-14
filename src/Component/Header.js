@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed z-10 w-screen bg-pink-300 p-6">
+    <div className="fixed z-10 w-screen bg-pink-300 p-8">
       {/* desktop and tablet */}
       <div className="hidden md:flex w-full h-full items-center justify-between">
         <Link to="/trangchu" className="flex items-center gap-2">

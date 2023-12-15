@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const BookManagement = () => {
     const [books, setBooks] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         // Lấy dữ liệu từ Firestore
@@ -37,15 +38,55 @@ const BookManagement = () => {
             console.error('Error deleting book: ', error);
         }
     };
+    const searchBooks = () => {
+        // Nếu không có từ khóa tìm kiếm, hiển thị tất cả sách
+        if (!searchTerm) {
+            const fetchData = async () => {
+                try {
+                    const snapshot = await getDocs(collection(firestore, 'books'));
+                    const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                    setBooks(data);
+                } catch (error) {
+                    console.error('Error fetching data: ', error);
+                }
+            };
+
+            fetchData();
+        } else {
+            // Nếu có từ khóa tìm kiếm, lọc danh sách sách
+            const filteredBooks = books.filter((book) =>
+                book.tenSach.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+
+            // Hiển thị danh sách sách đã lọc
+            setBooks(filteredBooks);
+        }
+    };
     return (
         <div className="min-h-screen mt-24 bg-primary flex items-center justify-center">
             <div className="w-full">
+                <div className="mb-4">
+                    <input
+                        type="text"
+                        placeholder="Tìm kiếm sách"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="p-2 border border-gray-300"
+                    />
+
+                    <button
+                        onClick={searchBooks}
+                        className="bg-blue-500 text-white px-4 py-2 rounded ml-2"
+                    >
+                        Tìm kiếm
+                    </button>
+                </div>
                 <h1 className=" m-auto mt-[-100px] text-3xl font-bold mb-8 text-center">Book Management</h1>
                 <div className="mb-8 bg-blue-500 text-white py-2 px-4 rounded-full float-right">
                     {/* Thêm nút "Thêm Sách" với Link ở đầu bảng */}
-                    <Link to="/createItem" className="text-white bg-blue-500 px-4 py-2 rounded mb-4">
+                    {/* <Link to="/createItem" className="text-white bg-blue-500 px-4 py-2 rounded mb-4">
                         Thêm Sách
-                    </Link>
+                    </Link> */}
                 </div>
                 <div className="mb-8 bg-green-500 text-white py-2 px-4 rounded-full float-right">
                     {/* Thêm nút "Thêm Sách" với Link ở đầu bảng */}
